@@ -4,6 +4,10 @@ import * as _ from "lodash";
 
 export class MatchWorkerConfig {
     public osu: BanchoClientOptions;
+    public http: {
+        host: "0.0.0.0",
+        port: 0,
+    };
 
     constructor(load: boolean = true) {
         if(load)
@@ -21,5 +25,6 @@ export class MatchWorkerConfig {
         const configObj = _.defaultsDeep(fileContentJson, defaultFileContentJson);
 
         this.osu = configObj.osu;
+        this.http = configObj.http;
     }
 }

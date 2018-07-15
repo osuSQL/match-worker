@@ -1,6 +1,6 @@
 import { MatchWorker } from "./MatchWorker";
 
-const app = new MatchWorker();
+const app = MatchWorker.instance;
 app.start();
 
 process.on("SIGINT", async () => {

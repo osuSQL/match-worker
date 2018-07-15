@@ -8,5 +8,9 @@
 		"limiterTimespan": 6000,
 		"limiterPrivate": 4,
 		"limiterPublic": 3
+	},
+	"http": {
+		"host": "127.0.0.1",
+		"port": 8080
 	}
 }
