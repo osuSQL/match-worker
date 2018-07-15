@@ -1,0 +1,12 @@
+{
+	"osu": {
+		"username": "",
+		"password": "",
+		"host": "irc.ppy.sh",
+		"port": 6667,
+		"apiKey": "",
+		"limiterTimespan": 6000,
+		"limiterPrivate": 4,
+		"limiterPublic": 3
+	}
+}
