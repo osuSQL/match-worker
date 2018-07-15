@@ -1,3 +1,9 @@
 import { MatchWorker } from "./MatchWorker";
 
-(new MatchWorker()).start();
+const app = new MatchWorker();
+app.start();
+
+process.on("SIGINT", async () => {
+    await app.stop();
+    process.exit(0);
+});

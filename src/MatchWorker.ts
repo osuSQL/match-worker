@@ -22,6 +22,11 @@ export class MatchWorker {
         this.logger.info("MatchWorker started!");
     }
 
+    public async stop() {
+        await this.bancho.disconnect();
+        this.logger.info("MatchWorker stopped!");
+    }
+
     public static getLogger(label?: string): winston.Logger {
         return winston.createLogger({
             format: winston.format.combine(
