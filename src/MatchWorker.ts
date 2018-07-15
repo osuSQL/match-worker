@@ -1,6 +1,6 @@
 import * as winston from "winston";
 import * as winstonDailyRotateFile from "winston-daily-rotate-file";
-import { BanchoClient } from "./BanchoClient";
+import { BanchoClient } from "./common/BanchoClient";
 import { MatchWorkerConfig } from "./MatchWorkerConfig";
 
 export class MatchWorker {
@@ -14,7 +14,7 @@ export class MatchWorker {
     ];
 
     public config = new MatchWorkerConfig();
-    public bancho = new BanchoClient(this);
+    public bancho = new BanchoClient(this.config.osu, MatchWorker.getLogger("bancho"));
     public logger = MatchWorker.getLogger();
 
     public async start() {
